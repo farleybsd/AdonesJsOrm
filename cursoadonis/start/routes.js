@@ -16,27 +16,63 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.group(() =>{
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
 
-Route.get('/postagem/:id',({params})=>{
-  return {mensagem:'Retorno da rota postagem com o parametro - ' + params.id}
+Route.resource("/postagem","Teste2Controller")
 
-})
 
-Route.post('/postagem', () => {
-  return { mensagem: 'Retorno da rota postagem!' }
-})
 
-Route.put('/postagem', () => {
-  return { mensagem: 'Retorno da rota postagem!' }
-})
 
-Route.delete('/postagem', () => {
-  return { mensagem: 'Retorno da rota postagem!' }
-})
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Route.get("/postagem","TesteController.index")
+
+// Route.get("/postagem/:id","TesteController.show")
+
+// Route.post("/postagem/:id","TesteController.store")
+
+// Route.put("/postagem/:id","TesteController.put")
+
+// Route.delete("/postagem/:id","TesteController.delete")
+
+
+
+// Route.group(() =>{
+
+// Route.get('/', () => {
+//   return { greeting: 'Hello world in JSON' }
+// })
+
+// Route.get('/postagem/:id',({params})=>{
+//   return {mensagem:'Retorno da rota postagem com o parametro - ' + params.id}
+
+// })
+
+// Route.post('/postagem', () => {
+//   return { mensagem: 'Retorno da rota postagem!' }
+// })
+
+// Route.put('/postagem', () => {
+//   return { mensagem: 'Retorno da rota postagem!' }
+// })
+
+// Route.delete('/postagem', () => {
+//   return { mensagem: 'Retorno da rota postagem!' }
+// })
+
+// })

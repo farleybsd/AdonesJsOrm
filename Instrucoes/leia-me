@@ -57,3 +57,10 @@ adonis make:migration users
 4.5-execultando uma migration
 
 adonis migration:run
+
+5 - Criando Controllers de teste
+
+5.1 adonis make:controller Teste
+
+6- Criando Controllers com as funcoes
+adonis make:controller Teste2 --resource
