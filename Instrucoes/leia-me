@@ -1,0 +1,59 @@
+1 - Instalando Adonis
+npm i -g @adonisjs/cli
+
+2- Criando Projeto
+adonis new cursoadonis --api-only
+
+3- Iniciando Servidor
+adonis serve --dev
+
+4 -  Databases
+
+4.1-Escolher o driver 
+MSSQL | npm i mssql@4.1
+
+4.2- Configurando a base dados
+
+4.2.1 na raiz editar arquivo env
+
+HOST=127.0.0.1
+PORT=3333
+NODE_ENV=development
+APP_NAME=AdonisJs
+APP_URL=http://${HOST}:${PORT}
+CACHE_VIEWS=false
+APP_KEY=apMewPKyGqbQES7W12RCSLI3l5R0SEV0
+DB_CONNECTION=MSSQL
+DB_HOST=192.168.192.10
+DB_PORT=1433
+DB_USER=user_desenv
+DB_PASSWORD=2kuser_desenv#3y
+DB_DATABASE=cursoadonis
+HASH_DRIVER=bcrypt
+
+editar o arquivo em config/database.js
+ MSSQL: {
+    client: 'MSSQL',
+    connection: {
+      host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', ''),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis'),
+      options:{
+        port:1433
+      }
+    },
+    debug: Env.get('DB_DEBUG', false)
+  },
+
+
+4.3-Configurar  a database na raiz arquivo .env
+
+4.4-Criando  uma migration
+
+adonis make:migration users
+
+4.5-execultando uma migration
+
+adonis migration:run
