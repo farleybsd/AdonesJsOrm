@@ -64,3 +64,8 @@ adonis migration:run
 
 6- Criando Controllers com as funcoes
 adonis make:controller Teste2 --resource
+
+
+7 create model
+
+
