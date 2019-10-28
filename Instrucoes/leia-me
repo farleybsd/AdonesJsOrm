@@ -66,6 +66,8 @@ adonis migration:run
 adonis make:controller Teste2 --resource
 
 
-7 create model
+7 create model Atencao modelo tem quer igual nome da tabela
+
+adonis make:model Postagens
 
 

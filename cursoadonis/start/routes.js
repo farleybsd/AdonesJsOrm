@@ -18,9 +18,11 @@ const Route = use('Route')
 
 
 
-Route.resource("postagem","Teste2Controller")
+//Route.resource("postagem","Teste2Controller")
 
 Route.resource("usuarios","UsuarioController")
+
+Route.resource("postagens","PostagenController")
 
 
 
