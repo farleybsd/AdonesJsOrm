@@ -116,6 +116,16 @@ class UsuarioController {
       User.delete()
       response.send({mensagem:"Deletado com Sucesso"})
   }
+
+  async getToken({request,response,auth}){
+
+    const {email,password} = request.all()
+    const authenticacao = await auth.attempt(email,password)
+
+    response.send(authenticacao)
+
+  }
+
 }
 
 module.exports = UsuarioController
