@@ -94,6 +94,14 @@ class PostagenController {
     response.send(Postagen)
   }
 
+  async usuariodapostagem ({ params, request, response, view }) {
+
+    const Postagen = await PostagemModel.find(params.id)
+    Postagen.usuario = await Postagen.usuario().fetch()
+    return Postagen
+
+  }
+
   /**
    * Delete a postagen with id.
    * DELETE postagens/:id

@@ -71,6 +71,15 @@ class UsuarioController {
 
   }
 
+
+  async postagensusuarios ({ params, request, response, view }) {
+
+    const Userpostagens = await UsuarioModel.find(params.id)
+    Userpostagens.postagensusuarios = await Userpostagens.postagems().fetch()
+     return Userpostagens
+
+  }
+
   /**
    * Render a form to update an existing usuario.
    * GET usuarios/:id/edit

@@ -27,6 +27,10 @@ Route.resource("postagens","PostagenController").middleware(["auth"])
 
 Route.post("login","UsuarioController.getToken")
 
+Route.get("postagensusuarios/:id","UsuarioController.postagensusuarios")
+
+Route.get("usuariodapostagem/:id","PostagenController.usuariodapostagem")
+
 
 
 
